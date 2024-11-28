@@ -11,8 +11,11 @@ body {
   align-items: center;
   flex-direction: column;
   color: hsl(30, 10%, 34%);
+  font-size: 16px;
+  line-height: 1.6;
 }
 
+/* main Layout */
 main {
   background-color: white;
   display: flex;
@@ -20,8 +23,10 @@ main {
   flex-direction: column;
   max-width: 50%;
   margin: 2rem;
+  border-radius: 8px;
 }
 
+/* Typography */
 h1,
 h2 {
   font-family: "Young Serif", serif;
@@ -55,6 +60,7 @@ ol li {
   padding: 1rem;
   margin-top: 1rem;
   border-radius: 8px;
+  color: hsl(332, 40%, 25%);
 }
 
 h3 {
@@ -69,10 +75,43 @@ hr {
   margin-top: 1rem;
 }
 
+table {
+  margin-top: 1rem;
+}
+tr {
+  height: 2.5rem;
+}
+
+th {
+  font-weight: 400;
+  text-align: left;
+}
+
+td {
+  font-weight: 600;
+  color: hsl(332, 51%, 32%);
+}
+
+th,
+td {
+  width: 85%;
+  border-bottom: hsl(0, 0%, 66%) solid 0.5px;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: hsl(332, 51%, 32%);
+}
+
+/* Responsive Design */
 @media (min-width: 1440px) {
   main {
     padding: 1.5rem;
     border-radius: 1rem;
+    max-width: 70%;
   }
 
   img {
@@ -96,4 +135,13 @@ hr {
   .container {
     padding: 1rem;
   }
+}
+
+/* Utility Classes */
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
 }
