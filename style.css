@@ -6,17 +6,94 @@
 
 body {
   background-color: hsl(30, 54%, 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: hsl(30, 10%, 34%);
 }
 
 main {
-  max-width: 1440px;
+  background-color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  max-width: 50%;
+  margin: 2rem;
 }
 
-@media screen and (min-width: 375px) {
+h1,
+h2 {
+  font-family: "Young Serif", serif;
+  margin-top: 1rem;
+}
+
+p,
+li {
+  margin-top: 0.5rem;
+}
+
+p,
+h3,
+li,
+table {
+  font-family: "Outfit", sans-serif;
+}
+
+ul li {
+  margin-left: 1rem;
+  text-indent: 1rem;
+}
+
+ol li {
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+.preparation-time {
+  background-color: hsl(330, 100%, 98%);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+h3 {
+  color: hsl(332, 51%, 32%);
+}
+
+h2 {
+  color: hsl(14, 45%, 36%);
+}
+
+hr {
+  margin-top: 1rem;
+}
+
+@media (min-width: 1440px) {
   main {
-    margin: 1em 2em;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+}
+
+@media (min-width: 375px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .container {
+    padding: 1rem;
   }
 }
