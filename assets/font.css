@@ -33,14 +33,14 @@
   font-family: "outfit";
   font-style: normal;
   font-weight: 600;
-  src: url(./fonts/outfit/Outfit-SemiBold.ttf);
+  src: url("./fonts/outfit/Outfit-SemiBold.ttf");
 }
 
 @font-face {
   font-family: "outfit";
   font-style: normal;
   font-weight: 700;
-  src: url(./fonts/outfit/Outfit-Bold.ttf);
+  src: url("./fonts/outfit/Outfit-Bold.ttf");
 }
 
 /* young-serif */
@@ -48,5 +48,5 @@
   font-family: "young-serif";
   font-style: normal;
   font-weight: 400;
-  src: url(./fonts/young-serif/YoungSerif-Regular.ttf);
+  src: url("./fonts/young-serif/YoungSerif-Regular.ttf");
 }

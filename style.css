@@ -220,11 +220,11 @@ body {
     border-radius: 0;
   }
 
-  section {
+  .recipe-page section {
     margin: 0 32px;
   }
 
-  .main-topic .image {
+  .recipe-page .main-topic .image {
     width: calc(100% + 64px);
     height: 171px;
     margin-left: -32px;
