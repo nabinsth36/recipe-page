@@ -64,7 +64,7 @@ body {
   background-color: #fff;
 }
 
-h1 {
+.recipe-page h1 {
   color: var(--stone900);
   margin-bottom: 24px;
   font-size: 40px;
@@ -73,43 +73,43 @@ h1 {
 }
 /* The + combinator (adjacent sibling selector) targets a section element that is immediately preceded by another section element.*/
 
-section + section {
+.recipe-page section + section {
   margin-top: 32px;
 }
 
-section h2 {
+.recipe-page section h2 {
   color: var(--Rose800);
   line-height: 1;
 }
 
-section.content h2 {
+.recipe-page section.content h2 {
   margin-bottom: 24px;
   font-size: 28px;
   font-family: "young-serif";
 }
 
-section.content + section.content {
+.recipe-page section.content + section.content {
   padding-top: 32px;
   border-top: 1px solid var(--Stone150);
 }
 
-section .txt {
+.recipe-page section .txt {
   color: var(--Stone600);
   line-height: 1.5;
 }
 
-section .list li {
+.recipe-page section .list li {
   position: relative;
   padding-left: 40px;
   color: var(--Stone600);
   line-height: 1.5;
 }
 
-section .list li + li {
+.recipe-page section .list li + li {
   margin-top: 8px;
 }
 
-section .list li:before {
+.recipe-page section .list li:before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -121,15 +121,15 @@ section .list li:before {
   background: var(--Rose800);
 }
 
-section ol.list {
+.recipe-page section ol.list {
   counter-reset: order;
 }
 
-section ol.list li {
+.recipe-page section ol.list li {
   counter-increment: order;
 }
 
-section ol.list li:before {
+.recipe-page section ol.list li:before {
   content: counter(order) ".";
   top: 0;
   width: 0;
@@ -138,37 +138,37 @@ section ol.list li:before {
   color: var(--Brown800);
 }
 
-section table {
+.recipe-page section table {
   margin-top: 24px;
   color: var(--Stone600);
   text-align: left;
 }
 
-section table tr th {
+.recipe-page section table tr th {
   padding-left: 32px;
 }
 
-section table tr td {
+.recipe-page section table tr td {
   padding-left: 16px;
   padding-right: 32px;
   color: var(--Brown800);
   font-weight: 700;
 }
 
-section table tr th,
-section table tr td {
+.recipe-page section table tr th,
+.recipe-page section table tr td {
   padding-top: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--Stone150);
   line-height: 1.5;
 }
 
-section table tr:last-child th,
-section table tr:last-child td {
+.recipe-page section table tr:last-child th,
+.recipe-page section table tr:last-child td {
   border-bottom: 0;
 }
 
-.main-topic .image {
+.recipe-page .main-topic .image {
   width: 100%;
   height: 300px;
   margin-bottom: 40px;
@@ -176,20 +176,20 @@ section table tr:last-child td {
   overflow: hidden;
 }
 
-.main-topic .image img {
+.recipe-page .main-topic .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.main-topic .preparation-time {
+.recipe-page .main-topic .preparation-time {
   padding: 24px;
   margin-top: 32px;
   border-radius: var(--border-radius-medium);
   background: var(--Rose50);
 }
 
-.main-topic .preparation-time h3 {
+.recipe-page .main-topic .preparation-time h3 {
   margin-bottom: 16px;
   color: var(--Rose800);
   font-size: 20px;
