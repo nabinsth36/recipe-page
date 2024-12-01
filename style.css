@@ -1,147 +1,237 @@
+@charset "utf-8";
+
+@import url("/assets/font.css");
+
+/* reset */
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
 }
 
-body {
-  background-color: hsl(30, 54%, 90%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: hsl(30, 10%, 34%);
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* main Layout */
-main {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 50%;
-  margin: 2rem;
-  border-radius: 8px;
-}
-
-/* Typography */
-h1,
-h2 {
-  font-family: "Young Serif", serif;
-  margin-top: 1rem;
-}
-
-p,
-li {
-  margin-top: 0.5rem;
-}
-
-p,
-h3,
-li,
-table {
-  font-family: "Outfit", sans-serif;
-}
-
-ul li {
-  margin-left: 1rem;
-  text-indent: 1rem;
-}
-
-ol li {
-  margin-left: 1rem;
-  padding-left: 1rem;
-}
-
-.preparation-time {
-  background-color: hsl(330, 100%, 98%);
-  padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 8px;
-  color: hsl(332, 40%, 25%);
-}
-
-h3 {
-  color: hsl(332, 51%, 32%);
-}
-
-h2 {
-  color: hsl(14, 45%, 36%);
-}
-
-hr {
-  margin-top: 1rem;
-}
-
-table {
-  margin-top: 1rem;
-}
-tr {
-  height: 2.5rem;
-}
-
-th {
-  font-weight: 400;
-  text-align: left;
-}
-
-td {
-  font-weight: 600;
-  color: hsl(332, 51%, 32%);
-}
-
-th,
-td {
-  width: 85%;
-  border-bottom: hsl(0, 0%, 66%) solid 0.5px;
+ul,
+ol {
+  list-style: none;
 }
 
 a {
-  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
-a:hover {
-  color: hsl(332, 51%, 32%);
+b,
+strong {
+  font-weight: 700;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --White: #ffffff;
+
+  --Stone100: #f3e6d8;
+  --Stone150: #e4ded8;
+  --Stone600: #5f574e;
+  --Stone900: #302d2c;
+
+  --Brown800: #854632;
+
+  --Rose800: #7b284f;
+  --Rose50: #fff5fa;
+  --border-radius-large: 24px;
+  --border-radius-medium: 12px;
+}
+
+body {
+  background: var(--Stone100);
+  padding: 128px 76px;
+  font-size: 16px;
+  font-family: "outfit";
+}
+
+.recipe-page {
+  max-width: 736px;
+  padding: 40px;
+  margin: 0 auto;
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+h1 {
+  color: var(--stone900);
+  margin-bottom: 24px;
+  font-size: 40px;
+  font-family: "Young-serif";
+  line-height: 1;
+}
+/* The + combinator (adjacent sibling selector) targets a section element that is immediately preceded by another section element.*/
+
+section + section {
+  margin-top: 32px;
+}
+
+section h2 {
+  color: var(--Rose800);
+  line-height: 1;
+}
+
+section.content h2 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-family: "young-serif";
+}
+
+section.content + section.content {
+  padding-top: 32px;
+  border-top: 1px solid var(--Stone150);
+}
+
+section .txt {
+  color: var(--Stone600);
+  line-height: 1.5;
+}
+
+section .list li {
+  position: relative;
+  padding-left: 40px;
+  color: var(--Stone600);
+  line-height: 1.5;
+}
+
+section .list li + li {
+  margin-top: 8px;
+}
+
+section .list li:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--Rose800);
+}
+
+section ol.list {
+  counter-reset: order;
+}
+
+section ol.list li {
+  counter-increment: order;
+}
+
+section ol.list li:before {
+  content: counter(order) ".";
+  top: 0;
+  width: 0;
+  height: 0;
+  font-weight: 700;
+  color: var(--Brown800);
+}
+
+section table {
+  margin-top: 24px;
+  color: var(--Stone600);
+  text-align: left;
+}
+
+section table tr th {
+  padding-left: 32px;
+}
+
+section table tr td {
+  padding-left: 16px;
+  padding-right: 32px;
+  color: var(--Brown800);
+  font-weight: 700;
+}
+
+section table tr th,
+section table tr td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--Stone150);
+  line-height: 1.5;
+}
+
+section table tr:last-child th,
+section table tr:last-child td {
+  border-bottom: 0;
+}
+
+.main-topic .image {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 40px;
+  border-radius: var(--border-radius-medium);
+  overflow: hidden;
+}
+
+.main-topic .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-topic .preparation-time {
+  padding: 24px;
+  margin-top: 32px;
+  border-radius: var(--border-radius-medium);
+  background: var(--Rose50);
+}
+
+.main-topic .preparation-time h3 {
+  margin-bottom: 16px;
+  color: var(--Rose800);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+*/
 
 /* Responsive Design */
-@media (min-width: 1440px) {
-  main {
-    padding: 1.5rem;
-    border-radius: 1rem;
-    max-width: 70%;
-  }
-
-  img {
-    width: 100%;
-    border-radius: 1rem;
-  }
+/* Tablet */
+@media all and (max-width:768px) {
 }
 
-@media (min-width: 375px) {
-  main {
-    width: 100%;
-    margin: 0;
+@media all and (max-width: 640px) {
+  body {
+    padding: 0;
   }
 
-  img {
-    width: 100%;
+  .recipe-page {
+    padding: 0 0 40px;
     border-radius: 0;
-    margin: 0;
   }
 
-  .container {
-    padding: 1rem;
+  section {
+    margin: 0 32px;
+  }
+
+  .main-topic .image {
+    width: calc(100% + 64px);
+    height: 171px;
+    margin-left: -32px;
+    border-radius: 0;
   }
 }
 
-/* Utility Classes */
-.mt-2 {
-  margin-top: 2rem;
-}
-
-.mb-1 {
-  margin-bottom: 1rem;
+/* Mobile */
+@media all and (max-width: 375px) {
 }
